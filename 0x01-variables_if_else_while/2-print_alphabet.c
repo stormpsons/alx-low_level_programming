@@ -7,11 +7,10 @@
       */
 int main(void)
 {
-		char low;
+char low;
 
-		for (low = 'a'; low <= 'z'; low++)
-					putchar(low);
-				printf("\n");
-
-				return (0);
+for (low = 'a'; low <= 'z'; low++)
+putchar(low);
+printf("\n");
+return (0);
 }
