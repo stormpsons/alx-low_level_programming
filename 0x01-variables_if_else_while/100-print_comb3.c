@@ -19,12 +19,16 @@ int main(void)
 
 		{
 			putchar(n1);
+
 			putchar(n2);
+
 			if (n1 != 56 || n2 != 57)
 			{
 				putchar(com);
+
 				putchar(32);
 			}
+
 			n2 += 1;
 		}
 		n1 += 1;
