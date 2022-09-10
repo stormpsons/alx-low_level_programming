@@ -5,30 +5,25 @@
    * Numbers must be separated by ,followed by a space
     * The two digits must be different
        * Return: Always 0 (Success)
-       */
-
+   */
 int main(void)
 {
-	int n1 = 48;
-	int n2;
-	int com = 44;
-	while (n1 <= 57)
-	{
-		n2 = n1 + 1;
-		while (n2 <= 57)
-		{
-			putchar(n1);
-			putchar(n2);
-			if (n1 != 56 || n2 != 57)
-			{
-				putchar(com);
-				putchar(32);
-			}
-			n2 += 1;
-		}
-		n1 += 1;
-	}
-	putchar('\n');
+		int i;
+			int j;
 
-return (0);
+			for (i = 48; i < 57; i++)
+					{
+								for (j = i + 1; j < 58; j++)
+											{
+															putchar(i);
+																		putchar(j);
+																					if (i != 56 || j != 57)
+																									{
+																														putchar(',');
+																																		putchar(' ');
+																																					}
+																							}
+									}
+				putchar('\n');
+					return (0);
 }
