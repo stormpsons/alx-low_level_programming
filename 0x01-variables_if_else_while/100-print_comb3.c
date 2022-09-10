@@ -2,26 +2,34 @@
 #include <stdlib.h>
 #include <time.h>
 /**
-  * main - Entry point
-    * Return: Always 0 (Success)
-     */
+ *  * main - program that prints all possible different combinations of two digits
+ *   * Numbers must be separated by ,followed by a space
+ *    * The two digits must be different
+ *     * 01 and 10 are considered the same combination of the two digits 0 and 1
+ *      * Return: 0
+ *       */
+
 
 int main(void)
 {
-	int d;
-
-	for (d = 0; d < 90; d++)
+	int n1 = 48;
+	int n2;
+	int com = 44;
+	while (n1 <= 57)
 	{
-		for ()
+		n2 = n1 + 1;
+		while (n2 <= 57)
 		{
-			putchar((d / 10) + '0');
-			putchar((d % 10) + '0');
+			putchar(n1);
+			putchar(n2);
+			if (n1 != 56 || n2 != 57)
+			{
+				putchar(com);
+				putchar(32);
+			}
+			n2 += 1;
 		}
-		if (d != 89)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		n1 += 1;
 	}
 	putchar('\n');
 	return (0);
