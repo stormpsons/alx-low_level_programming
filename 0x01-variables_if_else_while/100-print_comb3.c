@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
 /**
   * main - program that prints all possible different combinations of two digits
    * Numbers must be separated by ,followed by a space
