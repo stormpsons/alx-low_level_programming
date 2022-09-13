@@ -1,4 +1,5 @@
- #include "0-putchar.c"
+#include "0-putchar.c"
+
 /**
  * main - Entry point
  * Return: Always 0 (Success)
