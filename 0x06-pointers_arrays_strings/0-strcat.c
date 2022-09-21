@@ -23,5 +23,6 @@ for (i = 0; src[i] != 0; i++)
 	dlen++;
 }
 dest[dlen] = '\0';
+
 return (dest);
 }
