@@ -8,27 +8,27 @@ char *cap_string(char *str)
 {
 int index = 0;
 
-int index = 0;
-
-while (str[++index])
+while (*(s + i) != '\0')
 {
-while (!(str[index] >= 'a' && str[index] <= 'z'))
-index++;
-
-if (str[index - 1] == ' ' ||
-str[index - 1] == '\t' ||
-str[index - 1] == '\n' ||
-str[index - 1] == ',' ||
-str[index - 1] == ';' ||
-str[index - 1] == '.' ||
-str[index - 1] == '!' ||
-str[index - 1] == '?' ||
-str[index - 1] == '"' ||
-str[index - 1] == '(' ||
-str[index - 1] == ')' ||
-str[index - 1] == '{' ||
-str[index - 1] == '}')
-str[index] -= 32;
+	if (i == 0 && (*(s + i) >= 97 && *(s + i) <= 122))
+	{
+		*(s + i) = *(s + i) - ' ';
+		i++;
+	}
+	if (*(s + i) == ' ' || *(s + i) == '\n' || *(s + i) == '\t'
+			|| *(s + i) == ',' || *(s + i) == ';' || *(s + i) == '!'
+			|| *(s + i) == '?' || *(s + i) == '"' || *(s + i) == '('
+			|| *(s + i) == ')' || *(s + i) == '{' || *(s + i) == '}'
+			|| *(s + i) == '.')
+	{
+		i++;
+		if (*(s + i) >= 97 && *(s + i) <= 122)
+		{
+			*(s + i) = *(s + i) - ' ';
+		}
+	}
+	else
+		i++;
 }
-return (str);
+return (s);
 }
