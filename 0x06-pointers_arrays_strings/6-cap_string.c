@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
 *cap_string - function that capitalize first character of a word
 *@str: string to capitalize
@@ -8,27 +10,20 @@ char *cap_string(char *str)
 {
 int index = 0;
 
-while (*(s + i) != '\0')
+int cspc = 13;
+
+char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
+
+while (s[a])
 {
-	if (i == 0 && (*(s + i) >= 97 && *(s + i) <= 122))
+	i = 0;
+	while (i < cspc)
 	{
-		*(s + i) = *(s + i) - ' ';
+		if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
+			s[a] -= 32;
 		i++;
 	}
-	if (*(s + i) == ' ' || *(s + i) == '\n' || *(s + i) == '\t'
-			|| *(s + i) == ',' || *(s + i) == ';' || *(s + i) == '!'
-			|| *(s + i) == '?' || *(s + i) == '"' || *(s + i) == '('
-			|| *(s + i) == ')' || *(s + i) == '{' || *(s + i) == '}'
-			|| *(s + i) == '.')
-	{
-		i++;
-		if (*(s + i) >= 97 && *(s + i) <= 122)
-		{
-			*(s + i) = *(s + i) - ' ';
-		}
-	}
-	else
-		i++;
+	a++;
 }
 return (s);
 }
