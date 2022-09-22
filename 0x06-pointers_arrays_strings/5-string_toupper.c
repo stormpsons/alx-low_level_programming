@@ -7,15 +7,16 @@
 *Return: char.
 */
 
-char *string_toupper(char *ch)
-{
-int i = 0;
 
-while (*(ch + i) != '\0')
+char *string_toupper(char *str)
 {
-if (*(ch + i) >= 97 && *(ch + i) <= 122)
-*(ch + i) = *(ch + i) - ' ';
-i++;
-}
-return (ch);
+	int index = 0;
+
+	while (str[index++])
+	{
+		if (str[index] >= 'a' && str[index] <= 'z')
+			str[index] -= 32;
+	}
+
+	return (str);
 }
