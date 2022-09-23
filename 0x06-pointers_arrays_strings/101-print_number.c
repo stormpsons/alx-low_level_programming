@@ -1,5 +1,3 @@
-Task 9
-
 #include "main.h"
 /**
 * print_number - prints an integer
